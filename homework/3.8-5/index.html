@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* *{
+        margin: 0;padding: 0;
+    } */
+    .bigbox {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .container {
+        width: 244px;
+        box-sizing: border-box;
+        padding: 21px;
+        border-left: #F4F4F4 1px solid;
+        border-right: #F4F4F4 1px solid;
+    }
+
+    .bigbox>div:nth-child(1) {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .bigbox>div:nth-child(2):hover {
+        border: #FF5000 1px solid;
+    }
+
+    .container .img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container img {
+        width: 198px;
+        height: 198px;
+    }
+
+    .container .title {
+        width: 100%;
+        color: #666666;
+        line-height: 20px;
+        font-size: 14px;
+        margin: 10px 0 15px 0;
+    }
+
+    .info {
+        color: #999999;
+        font-size: 13px;
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .price>div:nth-child(1) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .price .new {
+        color: #FF590E;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .new span {
+        font-size: 7px;
+    }
+
+    .price del {
+        color: #999999;
+        font-size: 8px;
+        margin-left: 2px;
+    }
+
+    .price .sell {
+        font-size: 12px;
+        color: #999999;
+
+    }
+
+    /* 作业二 */
+    .bigwork{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .bigwork>div:nth-child(1){
+        margin-top:10px ;
+    }
+    .bigwork>div:nth-child(2):hover{
+        border: #FF4400 1px solid;
+    }
+    .bigwork>div:nth-child(2):hover .p{
+        display: none;
+    }
+    .bigwork>div:nth-child(2):hover .d{
+        display: block;
+    }
+    .homework {
+        width: 237px;
+        /* height: 330px; */
+        padding: 17px 19px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: 11px;
+    }
+
+    .image img {
+        width: 198px;
+        height: 198px;
+    }
+
+    .homework .title {
+        font-size: 13.9px;
+        line-height: 22px;
+        color: #666666;
+        
+
+    }
+
+    .homework .title img {
+        width: 40px;
+        height: 16px;
+        transform: translateY(2px);
+    }
+    .price-details .p {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: #9CA0AA;
+        font-size: 14px;
+        margin-top: 32px;
+    }
+    .p span{
+        font-size: 10px;
+        transform: translateY(-2px);
+    }
+
+    .price-details .price {
+        color: #FF4400;
+        font-size: 18px;
+        /* font-weight: 600; */
+    }
+
+    .d {
+        display: none;
+        width: 100%;
+        height: 65px;
+        background-color: #FF4400;
+        color: #fff;
+        font-size: 25px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        text-align: center;
+        line-height: 65px;
+    }
+</style>
+
+<body>
+    <div class="bigbox">
+        <div class="container">
+            <div class="img">
+                <img src="./image/cup.png" alt="">
+            </div>
+            <div class="text">
+                <div class="title">一次性纸杯定制印logo订做创意广告杯订制加厚杯子定做低价字</div>
+                <div class="info">
+                    <div>评价</div>
+                    <div>&nbsp;0&nbsp;&nbsp;</div>
+                    <div>收藏&nbsp;</div>
+                    <div>4352</div>
+                </div>
+                <div class="price">
+                    <div>
+                        <div class="new"><span>¥</span>93</div>
+                        <del class="old">¥111</del>
+                    </div>
+                    <div class="sell">月销321笔</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="img">
+                <img src="./image/cup.png" alt="">
+            </div>
+            <div class="text">
+                <div class="title">一次性纸杯定制印logo订做创意广告杯订制加厚杯子定做低价字</div>
+                <div class="info">
+                    <div>评价</div>
+                    <div>&nbsp;0&nbsp;&nbsp;</div>
+                    <div>收藏&nbsp;</div>
+                    <div>4352</div>
+                </div>
+                <div class="price">
+                    <div>
+                        <div class="new"><span>¥</span>93</div>
+                        <del class="old">¥111</del>
+                    </div>
+                    <div class="sell">月销321笔</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>作业二</p>
+    <div class="bigwork">
+        <div class="homework">
+            <div class="image">
+                <img src="./image/coat.png" alt="">
+            </div>
+            <div class="title">
+                <img src="./image/hot.png" alt="">
+                冬季新款中长款绣花貂绒大衣女韩版正品双面绒连帽加厚
+            </div>
+            <div class="price-details">
+                <div class="p">
+                    <div class="price"><span>¥&nbsp;</span> 198</div>
+                    <div>销量:3</div>
+                </div>
+                <div class="d">
+                    查看详情
+                </div>
+            </div>
+        </div>
+        <div class="homework">
+            <div class="image">
+                <img src="./image/coat.png" alt="">
+            </div>
+            <div class="title">
+                <img src="./image/hot.png" alt="">
+                冬季新款中长款绣花貂绒大衣女韩版正品双面绒连帽加厚
+            </div>
+            <div class="price-details">
+                <div class="p">
+                    <div class="price"><span >¥&nbsp;</span>198</div>
+                    <div>销量:3</div>
+                </div>
+                <div class="d">
+                    查看详情
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

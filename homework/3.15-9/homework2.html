@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: solid 1px #0000FF;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+        width: 920px;
+    }
+    .box div{
+        width: 300px;
+        height: 250px;
+        position: relative;
+        background: url(./image/d3.png) no-repeat ;
+        background-size: 300px 250px;
+        overflow: hidden;
+        text-align: center;
+        line-height: 250px;
+        text-align: center;
+        line-height: 250px;
+        z-index: 9999;
+        /* transition-property: top,bottom,color; */
+        /* transition-duration: 0.3s,0.3s,0.1s; */
+        /* transition-delay: 0s,0s,0.3s; */
+        /* transition: all 0.5s; */
+    }
+    
+    .box div::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -125px;
+        left: 0;
+        width: 300px;
+        height: 125px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s;
+        z-index: 1;
+    }
+    .box div:hover::before{
+        top: 0;
+    }
+    .box div::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -125px;
+        left: 0;
+        width: 300px;
+        height: 125px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        transition: all 0.3s;
+    }
+    .box div:hover::after{
+        bottom: 0;
+    }
+    b{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 9999;
+        color: rgba(255, 255, 255, 0);
+        transition: color 0s 0.3s;
+    }
+    body:hover b{
+        visibility: hidden;
+        color: rgba(255, 255, 255, 0);
+    }
+    .box div:hover b{
+        visibility: visible;
+        color: rgba(255, 255, 255, 1);
+    }
+    
+</style>
+<body>
+    <div class="box">
+        <div><b>龙湖三千城</b></div>
+        <div><b>龙湖三千城</b></div>
+        <div><b>龙湖三千城</b></div>
+    </div>
+</body>
+</html>

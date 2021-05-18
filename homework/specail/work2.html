@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 800px;
+        height: 115px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: 45px 70px;
+        grid-column-gap: 5px;
+      }
+      .option {
+        border: 1px solid #cbcbcc;
+        transform: translateY(1px);
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        color: #0000ee;
+        cursor: pointer;
+      }
+      .container {
+        border: 1px solid #cbcbcc;
+        grid-area: 2/1/3/11;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .first{
+        border-bottom: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="option first">电器</div>
+      <div class="option">数码</div>
+      <div class="option">家居</div>
+      <div class="option">男装</div>
+      <div class="container">电器内容1</div>
+    </div>
+    <script>
+      let option = document.querySelectorAll(".option");
+      let container = document.querySelector(".container");
+      let optionArr = [...option];
+      optionArr.forEach((item, index) => {
+        item.onmouseenter = function () {
+          optionArr.forEach((value) => {
+            value.style.borderBottom = "1px solid #CBCBCC";
+          });
+          container.innerHTML = `${item.innerHTML}内容${index + 1}`;
+          item.style.borderBottom = "1px solid #fff";
+        };
+      });
+    </script>
+  </body>
+</html>

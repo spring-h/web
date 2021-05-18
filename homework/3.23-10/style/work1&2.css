@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/* 1200px、992px、768px以及768px以下 */
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box{
+    width: 262px;
+    height: 336px;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    border: 1px solid #DDDDDD;
+    
+}
+.box>div:nth-child(1){
+    width: 100%;
+}
+.box img{
+    width: 100%;
+}
+.box>div:nth-child(2){
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+.bigtitle{
+    font-size: 18px;
+    color: #337ab7;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.box .title{
+    font-weight: 400;
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0 18px 0;
+}
+.box .content{
+    color: #555;
+    font-size: 13px;
+}
+
+
+/* (1)完成媒体查询样式布局，使得页面可以在
+1200px、992px、768px
+尺寸下，拥有不同的表现形态。 */
+.bigcontainer{
+    width: 100%;
+    height: 40px;
+    background-color: #222;
+    border-color: #080808;
+}
+.container2{
+    width: 1160px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#9d9d9d;
+    font-size: 14px;
+
+
+}
+.leftflex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left{
+    font-size: 18px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav>div{
+    margin-left: 33px;
+    position: relative;
+}
+.first{
+    color: #fff;
+}
+.circle::after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D9534F;
+    position: absolute;
+    right: -12px;
+    top: -2px;
+}
+
+.menu{
+    width: 45px;
+    height: 30px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 0;
+    box-sizing: border-box;
+    display: none;
+}
+.menu>div{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+
+
+@media screen and (max-width:1200px){
+    .container{
+        width: 1000px;
+    }
+    .box{
+        width: 293px;
+        height: 352px;
+    }
+    .container2{
+        width: 950px;
+    }
+
+}
+@media screen and (max-width:992px){
+    .container{
+        width: 750px;
+    }
+    .box{
+        width: 310px;
+        height: 360px;
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+    .container2{
+        width: 750px;
+    }
+    .first{
+        color:#9d9d9d;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        width: 600px;
+    }
+    .container2{
+        width: 100%;
+    }
+    .box{
+        width: 310px;
+        height: 360px;
+    }
+    .left{
+        display: flex;
+    }
+    .nav{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .leftflex{
+        width: 100%;
+        justify-content: space-between;
+    }
+}

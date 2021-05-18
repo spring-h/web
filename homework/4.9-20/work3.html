@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>nikankan</div>
+    <script>
+        function Fn(params) {
+            this.name=''
+            this.QS=function(name){
+                this.name=document.querySelector(name)
+            }
+            this.HTML=function(text){
+                this.name.innerHTML=text
+            }
+        }
+        let fn=new Fn()
+        console.log(fn)
+        fn.QS('div')
+        fn.HTML('哈哈哈')
+        console.log(fn.name)      
+
+    </script>
+</body>
+</html>

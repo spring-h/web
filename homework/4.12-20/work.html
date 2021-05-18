@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.introduce = function () {
+          console.log(`我是${this.name},今年${age}岁,性别${this.gender}`);
+        };
+      }
+      function Man(j, info) {
+        Person.call(this,info.pname,info.page,info.pgender);
+        this.j = j;
+        this.showlove = function (gril) {
+          return `一名叫${this.name}，${this.age}岁，肌肉${this.j}的男孩子向【${gril}】表白`;
+        };
+      }
+      function Woman(z, info) {
+        Person.call(this,info.pname,info.page,info.pgender);
+        this.z = z 
+        this.refused = function (boy) {
+          return `一名叫${this.name}，${this.age}岁，智慧${this.z}的女孩子拒绝了【${boy}】的表白`;
+        };
+      }
+      var frank = new Man("无", {
+        pname: "Frank",
+        page: 18,
+        pgender: "male",
+      });
+      console.log(frank.name)
+      var dlrb = new Woman("很多", {
+        pname: "迪丽热巴",
+        page: 17,
+        pgender: "female",
+      });
+      console.log(frank.showlove('迪丽热巴'))
+      console.log(dlrb.refused('frank'))
+    </script>
+  </body>
+</html>

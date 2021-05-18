@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul {
+        position: relative;
+        border: 1px solid #FF5000;
+        width: 190px;
+    }
+
+    li {
+        width: 190px;
+        height: 35px;
+        box-sizing: border-box;
+        padding: 0 25px 0 15px;
+
+    }
+
+    li>div:nth-child(1) {
+        width: 100%;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        color: #666666;
+        line-height: 35px;
+    }
+
+    li:hover {
+        background-color: #FFE4DC;
+    }
+
+    li div:nth-child(1):hover> {
+        color: #FF5000;
+        font-size: 15px;
+    }
+    li:hover .ab{
+        display: flex;
+    }
+    .ab:hover{
+        display: flex;
+    }
+    li>.ab {
+        position: absolute;
+        top: 0;
+        left: 190px;
+        display: none;
+    }
+
+    /* 悬浮商品框*********************************** */
+    .ab {
+        border: 2px solid #F94A14;
+        display: flex;
+        justify-content: flex-start;
+        width: 715px;
+        height: 530px;
+    }
+
+    /* 左 */
+    .ab .left {
+        width: 64%;
+        height: 100%;
+        padding-bottom: 15px;
+    }
+
+    .ab .padding-bottom {
+        overflow-y: scroll;
+        height: 510px;
+        box-sizing: border-box;
+        padding: 0 38px 0 30px;
+    }
+
+    .box {
+        margin-top: 15px;
+    }
+
+    .title {
+        color: #333333;
+        font-size: 17px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .commodity {
+        line-height: 18px;
+        max-width: 370px;
+        
+    }
+
+    .sbox {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+
+    .s-left {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    a {
+        margin-right: 15px;
+        color: #666666;
+        font-size: 13px;
+        text-decoration: none;
+        white-space: normal;
+    }
+
+    a:hover {
+        color: red;
+        text-decoration: underline;
+    }
+    /* 右 */
+    .ab>.right {
+        width: 36%;
+        border-left:1px solid #F4F4F4 ;
+        height: 100%;
+    }
+    .right-title{
+        width: 100%;
+        font-size: 15px;
+        color: #333333;
+        text-align: center;
+        margin-top: 23px;
+        margin-bottom: 10px;
+    }
+    .image{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .img-box div:nth-child(1){
+        background-color: #EDEDED;
+        width: 99px;
+        height: 99px;
+    }
+    .img-box img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-box div:nth-child(2){
+        margin-bottom: 20px;
+        color: #999999;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="layer">
+            <ul>
+                <div style="height: 5px;"></div>
+                <li>
+                    <div>
+                        <div>女装/内衣/家居</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>女鞋/男鞋/箱包</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>母婴/童装/玩具</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>男装/运动户外</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>美妆/彩妆/个户</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>手机/数码/企业</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>大家电/生活电器</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>零食/生鲜/茶酒</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>厨具/收纳/清洁</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>家纺/家饰/鲜花</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>图书音像/文具</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>医药保健/文具</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>汽车/二手车/用品</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>房产/装修家具/建材</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>手表/眼睛/珠宝饰品</div>
+                        <div>></div>
+                    </div>
+                    <div class="ab">
+                        <div class="left">
+                            <div class="padding-bottom">
+                                <div class="box">
+                                    <div class="title">
+                                        流行趋势
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">毛衣外套</a>
+                                        <a href="#">小黑裙</a>
+                                        <a href="#">阔腿神裤</a>
+                                        <a href="#">宝藏羊毛</a>
+                                        <a href="#">西装大衣</a>
+                                        <a href="#">芭比裤</a>
+                                        <a href="#">无钢圈文胸</a>
+                                        <a href="#">美背文胸</a>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        上衣
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">卫衣</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#">T恤</a>
+                                        <a href="#">马甲</a>
+                                        <a href="#">雪纺衫</a>
+
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        外套
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">棉衣棉服</a>
+                                        <a href="#">短外套</a>
+                                        <a href="#">毛呢大衣</a>
+                                        <a href="#">皮草</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#">西装</a>
+                                        <a href="#">皮衣</a>
+
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            女裙
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">连衣裙</a>
+                                            <a href="#">半身裙</a>
+                                            <a href="#">旗袍</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            女裤
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">休闲裤</a>
+                                            <a href="#">牛仔裤</a>
+                                            <a href="#">打底裤</a>
+                                            <a href="#">棉裤羽绒裤</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            特色女装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">大码女装</a>
+                                            <a href="#">中老年女装</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            套装
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">时尚套装</a>
+                                            <a href="#">运动套装</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sbox">
+                                    <div class="s-left">
+                                        <div class="title">
+                                            服饰服务
+                                        </div>
+                                        <div class="commodity">
+
+                                            <a href="#">洗衣服务</a>
+                                        </div>
+                                    </div>
+                                    <div class="s-rtight">
+                                        <div class="title">
+                                            袜子
+                                        </div>
+                                        <div class="commodity">
+                                            <a href="#">丝袜</a>
+                                            <a href="#">连裤袜</a>
+                                            <a href="#">船袜</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="title">
+                                        家居
+                                    </div>
+                                    <div class="commodity">
+                                        <a href="#">家居服套装</a>
+                                        <a href="#">保暖内衣</a>
+                                        <a href="#">睡衣</a>
+                                        <a href="#">袜子</a>
+                                        <a href="#">睡裙</a>
+                                        <a href="#">背心吊带</a>
+                                        <a href="#">睡袍</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="right-title">猜你喜欢</div>
+                            <div class="image">
+                                <div class="img-box">
+                                    <div><img src="./image/01.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/02.png" alt=""></div>
+                                    <div>连衣裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/03.jpg" alt=""></div>
+                                    <div>短外套</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/04.jpg" alt=""></div>
+                                    <div>衬衫</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/05.jpg" alt=""></div>
+                                    <div>半身裙</div>
+                                </div>
+                                <div class="img-box">
+                                    <div><img src="./image/06.jpg" alt=""></div>
+                                    <div>卫衣</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

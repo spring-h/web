@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="green">
+            <div>特聘医师，宠物医院特聘医师;从业宠物行业20年，接诊病例万余例;专业理论知识扎实，多次参加业内专业技术培训及各类兽医师大会。</div>
+            <img src="./img.png" alt="">
+        </div>
+
+        <div class="white">
+            <div class="textone">周尔12</div>
+            <div class="texttwo">特聘医师，宠物医院特聘医师;从业宠物行业20年，接诊病例万余例;专业理论知识扎实，多次参加业内专业技术培训及各类兽医师大会。
+            </div>
+        </div>
+    </div>
+    <!-- ************************************* -->
+    <p style="font-size: 100px;">下面是第二个</p>
+    <div class="boxtwo">
+        <div class="content">
+            <img src="./img.png" alt="">
+            <div class="text">
+                <div class="more">施华蔻是来自德国的全球顶级美发品牌，至今已拥有119年历史，发明了洗发水和shampoo这个单词，可谓美发造型界的...</div>
+                <div class="center">
+                    <span class="date">发布日期 丨</span>
+                    <span class="num">2017.10.09</span>
+                </div>
+                <div class="bottom">施华蔻迎来首位创型官联手张杰颠覆...
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- **************************************** -->
+    <p style="font-size: 100px;">下面是第三个</p>
+    <div class="boxthree">
+        <div class="boxcontent">
+            <img src="./img.png" alt="奢宠挚爱 尊享套装" title="奢宠挚爱 尊享套装">
+            <div style="color:#E64C5C;font-size: 26px;margin-top: 10px;margin-bottom: 15px;">奢宠挚爱 尊享套装</div>
+            <div style="color: #C2C2C2;font-size: 20px;">核心基础拥有深海海洋复合体能量</div>
+        </div>
+    </div>
+    <!-- **************************************** -->
+    <p style="font-size: 100px;">下面是第四个</p>
+    <div class="boxfour">
+        <div class="container">
+            <div class="imgbox">
+                <img src="./img.png" alt="">
+                <div style="color: #fff;"><span class="spanone">24</span> <span class="spantwo">Jun</span> </div>
+            </div>
+            <div class="textbox">
+                <div class="title"><b>如何选择适合自己的发型</b></div>
+                <div class="eye">
+                    美发店加盟 丨
+                    <img src="./eye.png" alt="">
+                    <b>2</b>
+                </div>
+                <div class="moretext">发型由于其可变性又可以修饰脸型，同发型展示您不同风格的美。发型与脸型搭配设计,是决定美的重要因素之一。甜美的中长直发发型精致的小圆脸搭配.上优雅的偏分设计，发尾蓬松的微卷凸显出性感的锁骨来，优雅十足。对于小个子姓来说清爽的短发是</div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        border: 0;
+        padding: 0;
+    }
+
+    /* 第一个作业css */
+    .bigbox {
+        box-sizing: border-box;
+        width: 410px;
+        height: 600px;
+        box-shadow: 0px 0px 3px #888;
+        padding: 25px 38px 35px 30px;
+    }
+
+    .green {
+        background-color: #1CB19C;
+        width: 100%;
+        height: 390px;
+        position: relative;
+
+    }
+
+    .green div {
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 15px;
+        padding: 45px 50px 0 40px;
+    }
+
+    .green img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+
+    }
+
+    .white {
+        box-sizing: border-box;
+        height: 155px;
+        width: 100%;
+        padding-top: 60px;
+        box-shadow: 5px 0 5px -5px rgb(240, 240, 240),
+            -5px 0 5px -5px rgb(240, 240, 240);
+
+    }
+
+    .textone {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #6A6A6A;
+    }
+
+    .texttwo {
+        margin: 0 auto;
+        color: #A6A6A6;
+        width: 285px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    /* 第二个作业css */
+    .boxtwo {
+        box-sizing: border-box;
+        width: 325px;
+        height: 395px;
+        padding: 20px 12px 15px 12px;
+        background-color: #F5F5F5;
+        box-shadow: 0 0 1px #000;
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .content img {
+        width: 100%;
+        height: 195px;
+    }
+
+    .content>.text {
+        width: 100%;
+        height: calc(100% - 195px);
+        padding: 20px 40px 0 25px;
+        box-sizing: border-box;
+        box-shadow: 5px 0 5px -5px #999,
+                    0 5px 5px -5px #999;
+    }
+
+    .content>.text>.more {
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 18px;
+        color: #565656;
+        line-height: 21px;
+    }
+
+    .content>.text>.center>.date {
+        font-size: 12px;
+        color: #B8B8B8;
+    }
+
+    .content>.text>.center>.num {
+        color: #FF3D3D;
+        font-size: 9px;
+    }
+
+    .content>.text>.bottom {
+        margin-top: 6px;
+        font-size: 14px;
+        color: #565656;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* 第三个作业css */
+    .boxthree{
+        width: 340px;
+        height: 310px;
+        box-shadow: 0 0 3px #999;
+        padding: 25px 20px 35px 20px;
+        box-sizing: border-box;
+        border-bottom: #DD001B 2px solid;
+    }
+    .boxthree>.boxcontent{
+        width: 302px;
+        height: 100%;
+    }
+    .boxthree>.boxcontent>img{
+        width: 100%;
+        height: 180px;
+    }
+    /* 第四个作业css */
+    .boxfour{
+        width: 345px;
+        height: 460px;
+        background-color: #fff;
+        box-shadow: 0 0 3px #666;
+        box-sizing: border-box;
+        padding: 23px 20px 35px 25px;
+    }
+    .container{
+        width: 298px;
+        height: 405px;
+        border: 1px solid #EAEAEA;
+        
+    }
+    .container>.imgbox{
+        width: 100%;
+        position: relative;
+        
+    }
+    .container>.imgbox>img{
+        width: 100%;
+        height: 127px;
+    }
+    .container>.imgbox>div{
+        width: 63px;
+        height: 66px;
+        background-color: #000;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        box-sizing: border-box;
+        padding-left: 15px;
+        font-weight: 800;
+    }
+    .container>.imgbox .spanone{
+        font-size: 27px;
+        font-style: italic;
+        display: block;
+    }
+    .container>.imgbox .spantwo{
+        font-size: 13px;
+        
+    }
+    .container>.textbox{
+        box-sizing: border-box;
+        padding: 24px;
+    }
+    .container>.textbox>.title>b{
+        font-size: 18px;
+        margin: 23px 0 25px 0;
+    }
+    .container>.textbox>.eye{
+        color: #9A9A99;
+        font-size: 13px;
+        margin: 18px 0 27px 0;
+    }
+    .container>.textbox>.eye>img{
+        width: 17px;
+        height: 12px;
+        margin-left: 12px;
+        margin-right: 6px;
+    }
+    .moretext{
+        font-size: 14px;
+        color: #999999;
+        line-height: 20px;
+    }
+    
+    
+</style>
+
+</html>

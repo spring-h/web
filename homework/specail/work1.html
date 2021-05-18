@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 865px;
+        height: 80px;
+        background-color: #ff6600;
+        box-sizing: border-box;
+        padding: 0 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .text1 {
+        padding: 13px 20px;
+        color: #fff;
+        background-color: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="text1">首页</div>
+      <div class="text1">关于我们</div>
+      <div class="text1">产品中心</div>
+      <div class="text1">案例展示</div>
+      <div class="text1">联系我们</div>
+    </div>
+    <script>
+      let item = document.querySelectorAll(".text1");
+      let arr = [...item];
+      console.log(arr);
+      arr.forEach((item) => {
+        item.onmouseenter = function () {
+          arr.forEach(value=>{
+              value.style.backgroundColor='#ff6600'
+              value.style.color='#fff'
+          })
+          item.style.backgroundColor = "#fff";
+          item.style.color = '#000'
+        };
+        item.onmouseleave= function () {
+            item.style.color='#ff6600'
+        }
+      });
+    </script>
+  </body>
+</html>

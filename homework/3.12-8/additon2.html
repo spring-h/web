@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .add1 {
+        width: 920px;
+        height: 280px;
+        border: 1px solid #2727FF;
+        box-sizing: border-box;
+        padding-top: 30px;
+        background-color: #FFFFFF;
+    }
+
+    .top {
+        text-align: center;
+
+    }
+
+    .title {
+        font-size: 22px;
+        color: #696969;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .eng {
+        color: #F9BC04;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .list>ul {
+        width: 665px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box>div {
+        height: 30px;
+        width: 100%;
+        background-color: #F4F4F4;
+        color: #B3B1B1;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    /* 作业2 */
+    .add2 {
+        width: 646px;
+        height: 334px;
+        border: 1px solid #2727FF;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: #FFF;
+    }
+
+    .content {
+        width: 50%;
+        height: 110px;
+        flex-shrink: 0;
+    }
+
+    .title2 {
+        font-size: 7px;
+    }
+
+    .content>div:nth-child(2) {
+        font-size: 2px;
+        margin: 7px 0 10px;
+        line-height: 15px;
+        /* transform: scale(0.5); */
+    }
+
+    .red {
+        background-color: #E32929;
+        text-align: center;
+        line-height: 16px;
+        width: 62px;
+        height: 16px;
+        font-size: 6px;
+        color: #fff;
+    }
+
+    .add2 .content:nth-child(2),
+    .add2 .content:nth-child(3),
+    .add2 .content:nth-child(6) {
+        box-sizing: border-box;
+        padding: 15px 0 0 20px;
+    }
+
+    /* 作业3 */
+    .container {
+        width: 830px;
+        height: 409px;
+        background-color: #F9F7F1;
+        border: 2px solid #0000FF;
+        box-sizing: border-box;
+        padding: 100px 30px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container .box2 {
+        width: 370px;
+        height: 268px;
+        background-color: #fff;
+        position: relative;
+        box-sizing: border-box;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 10px 10px -10px #B4B6AE;
+    }
+
+    .i1 {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .more {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 5px;
+        color: #81696B;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .text4 {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .text5{
+        width: 110px;
+        height: 35px;
+        background-color: #FF6D6D;
+        text-align: center;
+        line-height: 35px;
+        font-size: 10px;
+        color: #fff;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="./icon/iconfont.css">
+
+<body>
+    <div class="add1">
+        <div class="top">
+            <div class="title">
+                电商软件开发中心
+            </div>
+            <div class="eng">
+                E-COMMERCE DEVELOPMENT
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="box">
+                        <img src="./image/d1.png" alt="">
+                        <div>B2B系统定制</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <img src="./image/d2.png" alt="">
+                        <div>B2B系统定制</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <img src="./image/d3.png" alt="">
+                        <div>B2B系统定制</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <img src="./image/d4.png" alt="">
+                        <div>B2B系统定制</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <img src="./image/d1.png" alt="">
+                        <div>B2B系统定制</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p style="font-size: 30px;">作业2</p>
+    <!-- 作业2 -->
+    <div class="add2">
+        <div class="content">
+            <img src="./image/1.png" alt="">
+        </div>
+        <div class="content">
+            <div class="title2">
+                Project First
+            </div>
+            <div>
+                far fjdl asdfkl asnel 4le sl asflkasj frswlkn falskdnf fnsanew nfas fksns kanfsafn snfls fnklsf f
+                far fjdl asdfkl asnel fnklsf f
+            </div>
+            <div class="red">
+                AEDA
+            </div>
+        </div>
+        <div class="content">
+            <div class="title2">
+                Project First
+            </div>
+            <div>
+                far fjdl asdfkl asnel 4le sl asflkasj frswlkn falskdnf fnsanew nfas fksns kanfsafn snfls fnklsf f
+                far fjdl asdfkl asnel fnklsf f
+            </div>
+            <div class="red">
+                AEDA EGE ENMFAS
+            </div>
+        </div>
+        <div class="content">
+            <img src="./image/2.png" alt="">
+        </div>
+        <div class="content">
+            <img src="./image/3.png" alt="">
+        </div>
+        <div class="content">
+            <div class="title2">
+                Project First
+            </div>
+            <div>
+                far fjdl asdfkl asnel 4le sl asflkasj frswlkn falskdnf fnsanew nfas fksns kanfsafn snfls fnklsf f
+                far fjdl asdfkl asnel fnklsf f
+            </div>
+            <div class="red">
+                AEDA EGE ENMFAS
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 30px;">作业3</p>
+    <!-- 作业3 -->
+    <div class="container">
+        <div class="box2">
+            <img class="i1" src="./image/e1.png" alt="">
+            <img class="i2" src="./image/e3.png" alt="">
+            <div class="more">
+                Lorem ipsum dolor sit amet,adipisicing elit, sed do
+                eiusmod tempor incididunt utet dolore magna aliqua.
+                Consectetur elit, sed do eiusmod tempor incididunt
+                ut labpre et dolore magna aliqua
+            </div>
+            <div class="text4">
+                <div class="iconfont">&#xe634;</div>
+                <div class="iconfont">&#xe614;</div>
+                <div class="iconfont">&#xea90;</div>
+                <div class="iconfont">&#xe641;</div>
+            </div>
+            <div class="text5">
+                READ MORE
+            </div>
+        </div>
+        <div class="box2">
+            <img class="i1" src="./image/e2.png" alt="">
+            <img class="i2" src="./image/e3.png" alt="">
+            <div class="more">
+                Lorem ipsum dolor sit amet,adipisicing elit, sed do<br>
+                eiusmod tempor incididunt utet dolore magna aliqua.<br>
+                Consectetur elit, sed do eiusmod tempor incididunt<br>
+                ut labpre et dolore magna aliqua
+            </div>
+            <div class="text4">
+                <div class="iconfont">&#xe634;</div>
+                <div class="iconfont">&#xe614;</div>
+                <div class="iconfont">&#xea90;</div>
+                <div class="iconfont">&#xe641;</div>
+            </div>
+            <div class="text5">
+                READ MORE
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

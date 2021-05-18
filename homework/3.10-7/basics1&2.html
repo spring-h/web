@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .basics1 {
+        width: 1460px;
+        height: 295px;
+        box-sizing: border-box;
+        padding: 50px 93px 45px 82px;
+        box-shadow: 0 0 2px #aaa;
+    }
+
+    .basics1>.title {
+        color: #444;
+        font-size: 22px;
+        width: 320px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border: 1px solid #888D92;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+
+    .title>span {
+        color: #B3B3B3;
+        font-size: 16px;
+        font-weight: 0;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .model {
+        width: 335px;
+        display: flex;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding-left: 30px;
+
+    }
+
+    .num {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #BDA380;
+        text-align: center;
+        line-height: 20px;
+        margin-right: 28px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .text {
+        /* margin-right: 15px; */
+    }
+
+    .strong {
+        font-size: 19px;
+        color: #464646;
+        margin-bottom: 25px;
+    }
+
+    .small {
+        font-size: 14px;
+        color: #B0B0B0;
+        line-height: 23px;
+    }
+
+    .line {
+        width: 1px;
+        background-color: #CBB79B;
+        height: 78px;
+        margin-left: 15px;
+    }
+
+    /* 作业二***************************** */
+    .basics2 {
+        width: 1348px;
+        height: 830px;
+        box-sizing: border-box;
+        padding: 25px 40px 30px 25px;
+        background-color: #F5F5F5;
+    }
+
+    .img-t-l img:hover,
+    .img-b-l img:hover,
+    .img-text:hover,
+    .olay:hover,
+    .more:hover {
+        box-shadow: 10px 0 15px -16px #444,
+            -10px 0 15px -16px #444,
+            0 10px 15px -16px #444;
+    }
+
+    .img-text:hover,
+    .olay:hover,
+    .more:hover {
+        cursor: pointer;
+    }
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left {
+        font-size: 22px;
+        color: #58424C;
+    }
+
+    .right {
+        color: #515151;
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav1 {
+        margin-left: 30px;
+    }
+
+    .nav1:hover {
+        color: #F32698;
+        text-decoration: underline;
+    }
+
+    .bottom {
+        margin-top: 20px;
+    }
+
+    .img-t {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .img-t-l {
+        width: 245px;
+        margin-right: 16px;
+        flex-shrink: 0;
+    }
+
+    .img-t-l>img {
+        width: 100%;
+        height: 360px;
+    }
+
+    .img-t-r {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .img-text {
+        width: 245px;
+        height: 360px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 20px;
+        position: relative;
+    }
+    .img-text>.ab{
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    /* .img-text .highlight:hover .caption{
+        color: red;
+    } */
+    .highlight{
+        border: 1px solid transparent;
+        position: relative;
+    }
+    .highlight .title:hover{
+        color: red;
+    }
+    .highlight .title:hover+.recommend{
+        color: red;
+    }
+    /* .highlight div:nth-child(1){
+        position: absolute;
+        border: 1px solid red;
+        left: 50%;
+        top: 28px;
+        transform: translateX(-50%);
+        width: 185px;
+        height: 16px;
+    } */
+    .highlight div:nth-child(1){
+        position: absolute;
+        /* border: 1px solid red; */
+        left: 50%;
+        top: 60px;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 13px;
+    }
+    .highlight div:nth-child(1):hover~.caption{
+        color: red;
+    }
+    
+    .img-text .title {
+        color: #3D3D3D;
+        font-size: 15px;
+        margin-top: 27px;
+    }
+
+    .img-text .recommend {
+        color: #696969;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    .img-text .price {
+        color: #F96C6C;
+        font-size: 14px;
+    }
+
+    .img-b {
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .img-b-l {
+        width: 245px;
+        margin-right: 16px;
+        flex-shrink: 0;
+    }
+
+    .img-b-l>img {
+        width: 100%;
+        height: 360px;
+    }
+
+    .img-b-r {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .com-more {
+        width: 245px;
+        height: 360px;
+        position: relative;
+    }
+
+    .olay {
+        width: 100%;
+        height: 175px;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+    .olaytext {
+        margin-right: 16px;
+        font-size: 15px;
+        color: #646464;
+    }
+    .olaytext div:nth-child(1):hover{
+        color: red;
+    }
+
+    .olaytext div:nth-child(2) {
+        font-size: 14px;
+        color: #FA8080;
+        margin-top: 15px;
+    }
+
+    .more {
+        background-color: #fff;
+        height: 175px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        font-size: 20px;
+        color: #474747;
+        display: flex;
+        align-items: center;
+    }
+    .moretext div:nth-child(1):hover{
+        color: red;
+    }
+    .moretext div:nth-child(2) {
+        font-size: 15px;
+        color: #757575;
+        margin-top: 5px;
+    }
+
+    .moretext {
+        margin-right: 55px;
+        margin-left: 25px;
+    }
+
+    .more>img {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+
+<body>
+    <div class="basics1">
+        <div class="title">
+            我们承诺<span>/Our commitment</span>
+        </div>
+        <div class="content">
+            <div class="model" style="width: 370px;">
+                <div class="num">1</div>
+                <div class="text">
+                    <div class="strong">品牌制造商</div>
+                    <div class="small" >我们的合作商全部是国内外一二线厂家</div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="model">
+                <div class="num">2</div>
+                <div class="text">
+                    <div class="strong">7天无理由退换货</div>
+                    <div class="small">收货7天内(以实际签收日期为准)进行退货申请，15天内进行换货申请</div>
+                </div>
+                <div class="line" style="height:105px;"></div>
+            </div>
+            <div class="model">
+                <div class="num">3</div>
+                <div class="text">
+                    <div class="strong">出口标准质检</div>
+                    <div class="small">所有产品按国家出口标准进行质检</div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="model">
+                <div class="num">4</div>
+                <div class="text">
+                    <div class="strong">无忧正品保证</div>
+                    <div class="small">产品正品保证，支持专柜验货，假一罚十</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 30px;">作业二</p>
+    <!-- 作业二******************************** -->
+    <div class="basics2">
+        <div class="top">
+            <div class="left">护肤</div>
+            <div class="right">
+                <div class="nav1" style="color:#F32698;text-decoration: underline;">热门</div>
+                <div class="nav1">洁面</div>
+                <div class="nav1" style="margin-left: 7px;">磨砂膏</div>
+                <div class="nav1">面膜</div>
+                <div class="nav1">面部护理套装</div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="img-t">
+                <div class="img-t-l">
+                    <img src="./img/commodity.png" alt="">
+                </div>
+                <div class="img-t-r">
+                    <div class="img-text">
+                        <img src="./img/1.png" alt="" >
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 123px;"></div>
+                                <div class="caption title">洗面奶新生焕活深彻洁面乳</div>
+                                <div class="recommend caption">细致毛孔、补水清洁</div>
+                            </div>
+                            <div class="price">￥103.00元</div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/2.png" alt="" >
+                        <div class="ab">
+                            <div class="highlight">
+                                <div></div>
+                                <div class="caption title">【补缺】亲亲水润五件套装</div>
+                                <div class="recommend caption">新生塑颜礼盒、补水保湿</div>
+                            </div>
+                            <div class="price">￥159.00元</div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/3.png" alt="" >
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 110px;"></div>
+                                <div class="caption title">火灿岩控油清痘洁面有</div>
+                                <div class="recommend caption">洗面奶、清洁毛孔</div>
+                            </div>
+                            <div class="price">￥35.00元</div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/4.png" alt="" >
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 95px;"></div>
+                                <div class="caption title">Olay护肤套装多效修护礼盒</div>
+                                <div class="recommend caption">多效三步礼盒</div>
+                            </div>
+                            <div class="price">￥129.00元</div>
+                        </div>
+                    </div>
+                    <!-- <div class="img-text">
+                        <img src="./img/2.png" alt="">
+                        <div class="title caption">[补缺]亲亲水润五件套装</div>
+                        <div class="recommend caption">新生塑颜礼盒、补水保湿</div>
+                        <div class="price">￥159.00元</div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/3.png" alt="">
+                        <div class="title caption">火灿岩控油清痘洁面有</div>
+                        <div class="recommend caption">洗面奶、清洁毛孔</div>
+                        <div class="price">￥35.00元</div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/4.png" alt="">
+                        <div class="title caption">Olay护肤套装多效修护礼盒</div>
+                        <div class="recommend caption">多效三步礼盒</div>
+                        <div class="price">￥129.00元</div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="img-b">
+                <div class="img-b-l">
+                    <img src="./img/commodity2.png" alt="">
+                </div>
+                <div class="img-b-r">
+                    <div class="img-text">
+                        <img src="./img/5.png" alt="">
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 170px;"></div>
+                                <div class="title caption">温碧泉深透补水沁润面膜20片</div>
+                                <div class="recommend caption">补水保湿护肤、面膜贴套装</div>
+                            </div>
+                            <div class="price">￥59.00元</div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/6.png" alt="">
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 115px;"></div>
+                                <div class="title caption">温碧泉新活泉娇嫩保湿乳霜</div>
+                                <div class="recommend caption">补水保湿滋养面霜</div>
+                            </div>
+                            <div class="price">￥120.00元</div>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/7.png" alt="">
+                        <div class="ab">
+                            <div class="highlight">
+                                <div style="width: 190px;"></div>
+                                <div class="title caption">密集修护水润面膜100g</div>
+                                <div class="recommend caption">补水保湿、细嫩滋养、水润嫩滑</div>
+                            </div>
+                            <div class="price">￥69.00元</div>
+                        </div>
+                    </div>
+                
+                    <!-- <div class="img-text">
+                        <img src="./img/6.png" alt="">
+                        <div class="title caption">温碧泉新活泉娇嫩保湿乳霜</div>
+                        <div class="recommend caption">补水保湿滋养面霜</div>
+                        <div class="price">￥120.00元</div>
+                    </div>
+                    <div class="img-text">
+                        <img src="./img/7.png" alt="">
+                        <div class="title caption">密集修护水润面膜100g</div>
+                        <div class="recommend caption">补水保湿、细嫩滋养、水润嫩滑</div>
+                        <div class="price">￥69.00元</div>
+                    </div> -->
+                    <div class="com-more">
+                        <div class="olay">
+                            <div class="olaytext">
+                                <div>玉兰油Olay...</div>
+                                <div>￥369.00元</div>
+                            </div>
+                            <img src="./img/8.png" alt="" style="width: 108px;height: 108px;">
+                        </div>
+                        <div class="more">
+                            <div class="moretext">
+                                <div>浏览更多</div>
+                                <div >美容护肤</div>
+                            </div>
+                            <img src="./img/arrows.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

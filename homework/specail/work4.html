@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            display: flex;
+            width: 975px;
+            height: 40px;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #FE9800;
+        }
+        .box{
+            padding: 0 20px;
+            height: 33px;
+            /* background-color: #fff; */
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            /* transition: all .5s; */
+        }
+        .choose{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="box choose">网站首页</div>
+        <div class="box">新闻动态中心</div>
+        <div class="box">产品展示</div>
+        <div class="box">案例欣赏</div>
+        <div class="box">练习我们联系</div>
+        <div class="box">留言社区</div>
+    </div>
+    <script>
+        let box=document.querySelectorAll('.box')
+        box.forEach(item=>{
+            item.onmouseenter=function(){
+                box.forEach(value=>{
+                    value.classList.remove('choose')
+                })
+                item.classList.add('choose')
+            }
+        })
+    </script>
+</body>
+</html>

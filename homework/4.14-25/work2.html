@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: grid;
+            grid-template-columns: 195px 150px 150px 195px;
+            grid-template-rows: 245px 30px 245px;
+            grid-gap:20px;
+        }
+        .c{
+            background-color: #DDDDDD;
+            display: grid;
+            grid-template-rows: repeat(8,58.5px);
+            grid-template-columns: 170px;
+            grid-gap:10px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .b{
+            background-color: #EFEFEF;
+            height: 30px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            border: 1px solid #CECECE;
+        }
+        .s{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #fff;
+            padding: 0 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .left{
+            grid-area: 1/1/4/2;
+        }
+        .right{
+            grid-area: 1/4/4/5;
+        }
+        .b{
+            grid-row-start: 2;
+        }
+        .la{
+            width: 170px;
+            height: 58.5px;
+            box-sizing: border-box;
+            padding-top:17px ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="c left"></div>
+        <div class="b arrowsl"><<<</div>
+        <div class="b arrowsr">>>></div>
+        <div class="c right"></div>
+    </div>
+    <script>
+        let c1=document.querySelectorAll('.c')[0]
+        let left=document.querySelector('.arrowsl')
+        let right=document.querySelector('.arrowsr')
+        let larr=['猴子','狮子','老虎','大象','海豚','乌龟','浣熊','海狸']
+        larr.forEach(item=>{
+            c1.innerHTML+=`<div class='s'><input type="checkbox" class='il' name="" id="${z(item)}"><label for="${z(item)}" class='la' >${item}</label></div>`
+        })
+        right.addEventListener('click',function(){ 
+            fn('il','ir','c2',z)
+        })
+        left.addEventListener('click',function(){
+            fn('ir','il','c1',z)
+        })
+        function z(item){
+            return item.charCodeAt(0)+item.charCodeAt(1)
+        }
+        function fn(a,b,c){
+            a=document.querySelectorAll(`.${a}`)
+            c=c=='c1'?document.querySelectorAll('.c')[0]:document.querySelectorAll('.c')[1]
+            let newArr=[]
+            a.forEach(item=>{
+                if(item.checked){
+                    newArr.push(item.nextElementSibling.innerHTML)
+                    item.parentElement.parentElement.removeChild(item.parentElement)
+                }
+            })
+            newArr.forEach(value=>{
+                c.innerHTML+=`<div class='s'><input type="checkbox" class=${b} name="" id="${z(value)}"><label for="${z(value)}" class='la' >${value}</label></div>`
+            })
+        }
+    </script>
+</body>
+</html>

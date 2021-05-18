@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./iconfont/iconfont.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .basics1 {
+        width: 1898px;
+        height: 670px;
+        background-color: #F9BB00;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .basics1::before {
+        content: '';
+        display: table;
+    }
+
+    .basics1 div:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    .basics1 div:nth-child(2) {
+        margin: 15px 0 40px;
+    }
+
+    .basics1>ul {
+        width: 921px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .basics1 li div:nth-child(1) {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        line-height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .basics1 li div:nth-child(2) {
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+
+    .font1 {
+        font-family: 'iconfont';
+        font-size: 38px;
+        color: #666666;
+    }
+
+    /* 作业二**************************** */
+    .basics2 {
+        width: 970px;
+        height: 714px;
+        background-color: #F9F7F1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding-top: 50px;
+
+    }
+
+    .art {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .art>img {}
+
+    .art>div:nth-child(2) {
+        width: 60px;
+        height: 3px;
+        background-color: #BBBBBB;
+        margin: 14px 0;
+    }
+
+    .art>div:nth-child(3) {
+        color: #796E67;
+        font-size: 8px;
+    }
+
+    .basics2 .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-size: 9px;
+    }
+
+    .basics2 .content {
+        margin-bottom: 50px;
+    }
+
+    .basics2 .container .content:nth-child(2n+1) {
+        text-align: right;
+    }
+
+    .basics2 .container div:nth-child(2n) .text-image,
+    .basics2 .container div:nth-child(2n+1)>img {
+        float: right;
+    }
+
+    .basics2 .container div:nth-child(2n) .text-image::after,
+    .basics2 .container div:nth-child(2n+1)>img::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .basics2 .container div:nth-child(2n+1) .text-image,
+    .basics2 .container div:nth-child(2n) img {
+        float: left;
+    }
+
+    .basics2 .container div:nth-child(2n+1) .text-image::after,
+    .basics2 .container div:nth-child(2n)>img::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .basics2 .text {
+        line-height: 19px;
+    }
+
+    .basics2 .text-image>img {
+        margin-bottom: 15px;
+    }
+    .basics2 .content>img{
+        transform: translateY(-10px);
+    }
+    .basics2 .text-image div:nth-child(2){
+        clear: both;
+        height: 0;
+    }
+    .basics2 .content:nth-child(2n)>img{
+        margin-right: 20px;
+    }
+    .basics2 .content:nth-child(2n+1)>img{
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <div class="basics1">
+        <div>
+            <img src="./image/1.png" alt="">
+        </div>
+        <div>
+            <img src="./image/2.png" alt="">
+        </div>
+        <ul>
+            <li>
+                <div>
+                    <span class="font1">&#xe613;</span>
+                </div>
+                <div>网站建设</div>
+            </li>
+            <li>
+                <div>
+                    <span class="font1">&#xe600;</span>
+                </div>
+                <div>APP开发</div>
+            </li>
+            <li>
+                <div>
+                    <span class="font1">&#xe63e;</span>
+                </div>
+                <div>小程序开发</div>
+            </li>
+            <li>
+                <div>
+                    <span class="font1">&#xe66c;</span>
+                </div>
+                <div>微信二次开发</div>
+            </li>
+            <li>
+                <div style="transform: rotate(-45deg);">
+                    <span class="font1">&#xe601;</span>
+                </div>
+                <div>SEO优化</div>
+            </li>
+        </ul>
+    </div>
+    <p style="font-size: 30px;">作业二</p>
+    <!-- 作业二 -->
+    <div class="basics2">
+        <div class="art">
+            <img src="./image/3.png" alt="">
+            <div></div>
+            <div>Lorem ipsum dolor sit amet</div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/11.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/22.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/33.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/44.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/11.png" alt="">
+            </div>
+            <div class="content">
+                <div class="text-image">
+                    <img src="./image/4.png" alt="">
+                    <div></div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+                    <div class="text">adipiscing elit. Aliquam viverra convallis auctor.</div>
+                    <div class="text">Sed accumsan libero quis mi commodo et</div>
+                    <div class="text">suscipit enim lacinia. Morbi rutrum vulputate</div>
+                    <div class="text">est sed faucibus.</div>
+                </div>
+                <img src="./image/55.png" alt="">
+            </div>
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>

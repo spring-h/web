@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .list>div {
+        width: 1200px;
+        background-color: #F4F7F4;
+        border: 1px solid #D9DCD9;
+        transition: all 0.3;
+        margin-bottom: 7px;
+        display: flex;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding: 15px 15px 20px;
+    }
+    .list>div>div:nth-child(2){
+        width: 100%;
+        margin-left: 9px;
+    }
+    .list>div:nth-child(2n){
+        margin-bottom: 17px;
+    }
+    .list>div>div:nth-child(1){
+        flex-shrink: 0;
+    }
+    .padding>div:nth-child(2){
+        line-height: 25px;
+    }
+    .list>div>div:nth-child(2):hover {
+        color: #D05D46;
+    }
+    .rotate:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 15px #999;
+    }
+    .padding:hover{
+        transform: scale(0.9);
+        box-shadow: 0 0 15px #999;
+    }   
+    .move:hover{
+        transform: translate(5px);
+        box-shadow: 0 0 15px #999;
+    }
+    .move2:hover{
+        transform: translate(10px,5px);
+        box-shadow: 0 0 15px #999;
+    }
+    .border:hover{
+        border-left: 5px solid #000;
+        box-shadow: 0 0 15px #999;
+    }
+    .border2:hover{
+        border-left: 5px solid red;
+        box-shadow: 0 0 15px #999;
+    }
+
+    
+</style>
+
+<body>
+    <div class="list">
+        <div class="rotate">
+            <div>1 &nbsp;/ </div>
+            <div>按比例缩放</div>
+        </div>
+        <div class="padding">
+            <div >2 &nbsp;/ </div>
+            <div>列表标题，使用行高和padding元素的内边距在边框和内容区之间。控制该区域最简单的属性是padding
+                属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是padding属性元素的内边距在边框和内容区之间。控制该区域最简单的属性是padding 属性</div>
+        </div>
+        <div class="move">
+            <div>1 &nbsp;/ </div>
+            <div>横向位移</div>
+        </div>
+        <div class="move2">
+            <div>2 &nbsp;/ </div>
+            <div>横向位移</div>
+        </div>
+        <div class="border">
+            <div>1 &nbsp;/ </div>
+            <div>添加边框</div>
+        </div>
+        <div class="border2">
+            <div>2 &nbsp;/ </div>
+            <div>添加边框</div>
+        </div>
+    </div>
+</body>
+
+</html>

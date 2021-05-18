@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 295px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid blue;
+        padding-top: 10px;
+      }
+      input {
+        margin-bottom: 20px;
+        height: 37px;
+        width: 265px;
+        text-indent: 2px;
+      }
+      .regiset {
+        margin-top: 10px;
+        background-color: #3f89ec;
+        color: #fff;
+        width: 265px;
+        height: 40px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 40px;
+      }
+      span{
+          color: red;
+      }
+      .info{
+          font-size: 12px;
+          width: 265px;
+          text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+      <p>用户名 密码均为123</p>
+    <div class="box">
+      <div class="info"></div>
+      <input type="text" placeholder="手机/邮箱/用户名" />
+      <input type="password" placeholder="密码" />
+      <div class="regiset">登录</div>
+    </div>
+
+    <script>
+      let input = document.querySelectorAll("input");
+      let btn = document.querySelector(".regiset");
+      let info = document.querySelector('.info')
+      let username = "123";
+      let password = "123";
+      btn.onclick = function () {
+        let uname = input[0].value;
+        let upw = input[1].value;
+        if (uname != username || upw != password) {
+            info.innerHTML=`<span>账号或密码错误，请重新输入或者</span>找回密码`
+            input.forEach(item=>{
+                item.value=''
+            })
+        }
+        if (uname==username&&upw==password) {
+            info.innerHTML=`<span>登录成功</span>`
+            input.forEach(item=>{
+                item.value=''
+            })
+        }
+      };
+    </script>
+  </body>
+</html>

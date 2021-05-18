@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nav {
+        display: flex;
+        width: 975px;
+        height: 40px;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fe9800;
+        position: relative;
+      }
+      .box {
+        padding: 0 20px;
+        height: 33px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        /* transition: all .5s; */
+        z-index: 1;
+      }
+      .choose {
+        color: #fff;
+      }
+      .bg {
+        border-radius: 15px;
+        background-color: black;
+        height: 33px;
+        width: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+        transition: all 0.25s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="bg"></div>
+      <div class="box">网站首页</div>
+      <div class="box">新闻动态中心</div>
+      <div class="box">产品展示</div>
+      <div class="box">案例欣赏</div>
+      <div class="box">练习我们联系</div>
+      <div class="box">留言社区</div>
+    </div>
+    <script>
+      let box = document.querySelectorAll(".box");
+      let bg = document.querySelector(".bg");
+      bg.style.width = box[0].offsetWidth + "px";
+      box[0].style.color = "#fff";
+      box.forEach((item) => {
+        item.onmouseenter = function () {
+          let old = bg.offsetLeft;
+          let width = bg.offsetWidth;
+          box.forEach((value) => {
+            value.style.color = "#333";
+          });
+          if (item.offsetLeft > old) {
+            let long = item.offsetLeft + item.offsetWidth - old;
+            bg.style.width = long + "px";
+            item.style.color = "#fff";
+            setTimeout(() => {
+              bg.style.width = item.offsetWidth + "px";
+              bg.style.left = item.offsetLeft + "px";
+              // item.classList.add("choose");
+            }, 250);
+          } else {
+            let long = old - item.offsetLeft + width;
+            bg.style.left = item.offsetLeft + "px";
+            bg.style.width = long + "px";
+            item.style.color = "#fff";
+
+            setTimeout(() => {
+              bg.style.width = item.offsetWidth + "px";
+              // item.classList.add('choose')
+            }, 250);
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{list-style: none;}
+    @keyframes frame {
+        from {
+            transform: rotate(360deg);
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes line1 {
+        0% {
+            transform: rotate(30deg);
+            transform-origin: right center;
+        }
+        
+        50%{
+            transform: rotate(-30deg);
+            transform-origin: right center;
+        }
+        100%{
+            transform: rotate(30deg);
+            transform-origin: right center;
+        }
+    }
+    @keyframes line2 {
+        0% {
+            transform: rotate(-30deg);
+            transform-origin: left center;
+        }
+        
+        50%{
+            transform: rotate(30deg);
+            transform-origin: left center;
+        }
+        100%{
+            transform: rotate(-30deg);
+            transform-origin: left center;
+        }
+    }
+    @keyframes ball{
+        0%{
+            transform: rotate(15deg);
+            transform-origin: 0 -130px;
+        }
+        50%{
+            transform: rotate(-15deg);
+            transform-origin: 0 -130px;
+        }
+        100%{
+            transform: rotate(15deg);
+            transform-origin: 0 -130px;
+        }
+    }
+
+    .clock {
+        border: 3px solid #FB9799;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+
+    .center {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #FA787B;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+    .minuteline{
+        width: 4px;
+        height: 60px;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: rotate(-5deg);
+        transform-origin:0,0;
+        z-index: 1;
+    }
+    .timeline{
+        width: 1px;
+        height: 75px;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transform: rotate(100deg);
+        transform-origin: 50% 0;
+        z-index: 1;
+    }
+    .secondline{
+        width: 0.1px;
+        height: 90px;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transform: rotate(170deg);
+        transform-origin: 50% 0;
+        z-index: 1;
+    }
+    .frame {
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        border: 2px solid #FB9799;
+        background-color: #fff;
+        position: absolute;
+        animation: frame 3s linear infinite;
+        z-index: -1;
+    }
+
+    .frame1 {
+        top: 0;
+        left: 0;
+    }
+
+    .frame2 {
+        top: 0;
+        right: 0;
+    }
+
+    .line {
+        width: 50px;
+        height: 3px;
+        background-color: #FB7984;
+        position: absolute;
+    }
+
+    .line1 {
+        top: 50%;
+        left: -40px;
+        animation: line1 3s linear infinite;
+        z-index: -1;
+    }
+
+    .line2 {
+        top: 50%;
+        right: -40px;
+        animation: line2 3s linear infinite;
+        z-index: -1;
+    }
+
+    .ball {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #FA7779;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        animation: ball 3s linear infinite;
+    }
+    span{
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+    }
+    .minute li{
+        width: 2px;
+        height: 10px;
+        background-color:#F98BA2;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .minute li:nth-child(1){
+        transform-origin: 0 100px;
+        transform: rotate(30deg);
+    }
+    .minute li:nth-child(2){
+        transform-origin: 0 100px;
+        transform: rotate(60deg);
+    }
+    .minute li:nth-child(3){
+        transform-origin: 0 100px;
+        transform: rotate(90deg);
+    }
+    .minute li:nth-child(4){
+        transform-origin: 0 100px;
+        transform: rotate(120deg);
+    }
+    .minute li:nth-child(5){
+        transform-origin: 0 100px;
+        transform: rotate(150deg);
+    }
+    .minute li:nth-child(6){
+        transform-origin: 0 100px;
+        transform: rotate(180deg);
+    }
+    .minute li:nth-child(7){
+        transform-origin: 0 100px;
+        transform: rotate(210deg);
+    }
+    .minute li:nth-child(8){
+        transform-origin: 0 100px;
+        transform: rotate(240deg);
+    }
+    .minute li:nth-child(9){
+        transform-origin: 0 100px;
+        transform: rotate(270deg);
+    }
+    .minute li:nth-child(10){
+        transform-origin: 0 100px;
+        transform: rotate(300deg);
+    }
+    .minute li:nth-child(11){
+        transform-origin: 0 100px;
+        transform: rotate(330deg);
+    }
+    .minute li:nth-child(12){
+        transform-origin: 0 100px;
+        transform: rotate(360deg);
+    }
+    .small li{
+        width: 1.5px;
+        height: 5px;
+        background-color:#F98BA2;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .small li:nth-child(1){
+        transform-origin: 0 100px;
+        transform: rotate(6deg);
+    }
+    .small li:nth-child(2){
+        transform-origin: 0 100px;
+        transform: rotate(12deg);
+    }
+    .small li:nth-child(3){
+        transform-origin: 0 100px;
+        transform: rotate(18deg);
+    }
+    .small li:nth-child(4){
+        transform-origin: 0 100px;
+        transform: rotate(24deg);
+    }
+    .small li:nth-child(5){
+        transform-origin: 0 100px;
+        transform: rotate(36deg);
+    }
+    .small li:nth-child(6){
+        transform-origin: 0 100px;
+        transform: rotate(42deg);
+    }
+    .small li:nth-child(7){
+        transform-origin: 0 100px;
+        transform: rotate(48deg);
+    }
+    .small li:nth-child(8){
+        transform-origin: 0 100px;
+        transform: rotate(54deg);
+    }
+    .small li:nth-child(9){
+        transform-origin: 0 100px;
+        transform: rotate(66deg);
+    }
+    .small li:nth-child(10){
+        transform-origin: 0 100px;
+        transform: rotate(72deg);
+    }
+    .small li:nth-child(11){
+        transform-origin: 0 100px;
+        transform: rotate(78deg);
+    }
+    .small li:nth-child(12){
+        transform-origin: 0 100px;
+        transform: rotate(84deg);
+    }
+    .small li:nth-child(13){
+        transform-origin: 0 100px;
+        transform: rotate(96deg);
+    }
+    .small li:nth-child(14){
+        transform-origin: 0 100px;
+        transform: rotate(102deg);
+    }
+    .small li:nth-child(15){
+        transform-origin: 0 100px;
+        transform: rotate(108deg);
+    }
+    .small li:nth-child(16){
+        transform-origin: 0 100px;
+        transform: rotate(114deg);
+    }
+    .small li:nth-child(17){
+        transform-origin: 0 100px;
+        transform: rotate(126deg);
+    }
+    .small li:nth-child(18){
+        transform-origin: 0 100px;
+        transform: rotate(132deg);
+    }
+    .small li:nth-child(19){
+        transform-origin: 0 100px;
+        transform: rotate(138deg);
+    }
+    .small li:nth-child(20){
+        transform-origin: 0 100px;
+        transform: rotate(144deg);
+    }
+    .small li:nth-child(21){
+        transform-origin: 0 100px;
+        transform: rotate(156deg);
+    }
+    .small li:nth-child(22){
+        transform-origin: 0 100px;
+        transform: rotate(162deg);
+    }.small li:nth-child(23){
+        transform-origin: 0 100px;
+        transform: rotate(168deg);
+    }
+    .small li:nth-child(24){
+        transform-origin: 0 100px;
+        transform: rotate(174deg);
+    }
+    .small li:nth-child(25){
+        transform-origin: 0 100px;
+        transform: rotate(186deg);
+    }
+    .small li:nth-child(26){
+        transform-origin: 0 100px;
+        transform: rotate(192deg);
+    }
+    .small li:nth-child(27){
+        transform-origin: 0 100px;
+        transform: rotate(198deg);
+    }
+    .small li:nth-child(28){
+        transform-origin: 0 100px;
+        transform: rotate(204deg);
+    }
+    .small li:nth-child(29){
+        transform-origin: 0 100px;
+        transform: rotate(216deg);
+    }
+    .small li:nth-child(30){
+        transform-origin: 0 100px;
+        transform: rotate(222deg);
+    }
+    .small li:nth-child(31){
+        transform-origin: 0 100px;
+        transform: rotate(228deg);
+    }
+    .small li:nth-child(32){
+        transform-origin: 0 100px;
+        transform: rotate(234deg);
+    }
+    .small li:nth-child(33){
+        transform-origin: 0 100px;
+        transform: rotate(246deg);
+    }
+    .small li:nth-child(34){
+        transform-origin: 0 100px;
+        transform: rotate(252deg);
+    }
+    .small li:nth-child(35){
+        transform-origin: 0 100px;
+        transform: rotate(258deg);
+    }
+    .small li:nth-child(36){
+        transform-origin: 0 100px;
+        transform: rotate(264deg);
+    }
+    .small li:nth-child(37){
+        transform-origin: 0 100px;
+        transform: rotate(276deg);
+    }
+    .small li:nth-child(38){
+        transform-origin: 0 100px;
+        transform: rotate(282deg);
+    }
+    .small li:nth-child(39){
+        transform-origin: 0 100px;
+        transform: rotate(288deg);
+    }
+    .small li:nth-child(40){
+        transform-origin: 0 100px;
+        transform: rotate(294deg);
+    }
+    .small li:nth-child(41){
+        transform-origin: 0 100px;
+        transform: rotate(306deg);
+    }
+    .small li:nth-child(42){
+        transform-origin: 0 100px;
+        transform: rotate(312deg);
+    }
+    .small li:nth-child(43){
+        transform-origin: 0 100px;
+        transform: rotate(318deg);
+    }
+    .small li:nth-child(44){
+        transform-origin: 0 100px;
+        transform: rotate(324deg);
+    }
+    .small li:nth-child(45){
+        transform-origin: 0 100px;
+        transform: rotate(336deg);
+    }
+    .small li:nth-child(46){
+        transform-origin: 0 100px;
+        transform: rotate(342deg);
+    }
+    .small li:nth-child(47){
+        transform-origin: 0 100px;
+        transform: rotate(348deg);
+    }
+    .small li:nth-child(48){
+        transform-origin: 0 100px;
+        transform: rotate(354deg);
+    }
+</style>
+
+<body>
+    <div class="clock">
+        <div class="center"></div>
+        <div class="frame frame1"></div>
+        <div class="frame frame2"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="ball"></div>                  
+        <div class="minuteline"></div>
+        <div class="timeline"></div>
+        <div class="secondline"></div>
+        <ul class="minute">
+            <li><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>4</span></li>
+            <li><span>5</span></li>
+            <li><span>6</span></li>
+            <li><span>7</span></li>
+            <li><span>8</span></li>
+            <li><span>9</span></li>
+            <li><span>10</span></li>
+            <li><span>11</span></li>
+            <li><span>12</span></li>
+        </ul>
+        <ul class="small">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

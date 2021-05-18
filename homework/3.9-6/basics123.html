@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .basics1 {
+        width: 555px;
+        height: 177px;
+        border: #0000FF 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .rectangle {
+        text-align: center;
+        line-height: 42px;
+        font-size: 13px;
+        color: #fff;
+    }
+
+
+
+    .rectangle1 {
+        width: 50px;
+        height: 42px;
+        background-color: #FF6600;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .rectangle2 {
+        width: 80px;
+        height: 42px;
+        background-color: #FF6600;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .rectangle3 {
+        width: 80px;
+        height: 42px;
+        background-color: #FF6600;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .rectangle4 {
+        width: 50px;
+        height: 42px;
+        background-color: #FF6600;
+        border-radius: 7px;
+        position: relative;
+    }
+
+    .rectangle5 {
+        width: 50px;
+        height: 42px;
+        background-color: #FF6600;
+        border-radius: 7px;
+        position: relative;
+    }
+
+    .rectangle1::after {
+        content: '';
+        display: none;
+        width: 0;
+        height: 0;
+        border: 5px solid #FF6600;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border-color: transparent transparent #ff6600 transparent;
+    }
+
+    .rectangle1:hover::after {
+        display: block;
+    }
+
+    .rectangle2::after {
+        content: '';
+        display: none;
+        width: 0;
+        height: 0;
+        border: 5px solid #FF6600;
+        position: absolute;
+        bottom: -10px;
+        left: 35px;
+        border-color: #ff6600 transparent transparent transparent;
+    }
+
+    .rectangle2:hover::after {
+        display: block;
+    }
+
+    .rectangle3::after {
+        content: '';
+        display: none;
+        width: 0;
+        height: 0;
+        border: 5px solid #FF6600;
+        position: absolute;
+        top: 16px;
+        left: -10px;
+        border-color: transparent #ff6600 transparent transparent;
+    }
+
+    .rectangle3:hover::after {
+        display: block;
+    }
+
+    .rectangle4::before {
+        content: '';
+        display: none;
+        width: 119px;
+        height: 146px;
+        background-color: #666666;
+        position: absolute;
+        top: -60px;
+        left: -36px;
+        z-index: -1;
+    }
+
+    .rectangle4::after {
+        content: '';
+        /* display: none; */
+        width: 0;
+        height: 0;
+        border: 5px solid #FF6600;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border-color: transparent transparent #ff6600 transparent;
+    }
+
+    .rectangle4:hover::before {
+        display: block;
+    }
+
+    .rectangle4:hover {
+        text-decoration: underline;
+    }
+
+    .rectangle5:hover {
+        color: #552374;
+        text-decoration: underline;
+    }
+
+    /* 精灵图 */
+    .basics2 {
+        width: 230px;
+        height: 610px;
+        box-sizing: border-box;
+        padding: 0 20px 20px;
+        border: #DEDEDE 1px solid;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    .imgbox {
+        flex-shrink: 0;
+        width: 75px;
+        height: 100px;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .img {
+        width: 58px;
+        height: 58px;
+        background-image: url(./image/spirit.png);
+        background-repeat: no-repeat;
+        background-position-x: -100px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /* border: 1px solid red; */
+    }
+
+    .imgone {
+        background-position-x: 0px;
+    }
+
+    .imgbox div:nth-child(2) {
+        width: 100%;
+        text-align: center;
+        margin-top: 62px;
+        margin-bottom: 5px;
+        color: #5A5A5A;
+        font-size: 1px;
+    }
+
+    .imgbox div:nth-child(3) {
+        width: 100%;
+        text-align: center;
+        color: #2F3C47;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .img1:hover {
+        background-position-x: -100px;
+    }
+    .img1:hover~div{
+        color: #eee;
+    }
+
+    .img2:hover {
+        background-position-x: 0;
+    }
+    .img2:hover~div{
+        color: #000;
+    }
+    .img3 {
+        background-position-y: -201px;
+    }
+
+    .img3:hover {
+        background-position: 0 -200px;
+    }
+    .img3:hover~div{
+        color: #C9C9CA;
+    }
+    .img4 {
+        background-position-y: -301px;
+    }
+
+    .img4:hover {
+        background-position: 0 -300px;
+    }
+    .img4:hover~div{
+        color: #967BB0;
+    }
+    .img5 {
+        background-position-y: -402px;
+    }
+
+    .img5:hover {
+        background-position: 0 -402px;
+    }
+    .img5:hover~div{
+        color: #68AF32;
+    }
+    .img6 {
+        background-position-y: -502px;
+    }
+
+    .img6:hover {
+        background-position: 0 -502px;
+    }     
+    .img6:hover~div{
+        color: #EBE885;
+    }
+    .img7 {
+        background-position-y: -603px;
+    }
+
+    .img7:hover {
+        background-position: 0 -603px;
+    }
+    .img7:hover~div{
+        color: #2389B4;
+    }
+    .img8 {
+        background-position-y: -703px;
+    }
+
+    .img8:hover {
+        background-position: 0 -703px;
+    }
+    .img8:hover~div{
+        color: #D8221E;
+    }
+    .img9 {
+        background-position-y: -803px;
+    }
+
+    .img9:hover {
+        background-position: 0 -803px;
+    }
+    .img9:hover~div{
+        color: #EBB425;
+    }
+    .img0 {
+        background-position-y: -903px;
+    }
+
+    .img0:hover {
+        background-position: 0 -903px;
+    }
+    .img0:hover~div {
+        color: #EBB425;
+    }
+
+    /* 作业3 */
+    .basics3{
+        width: 358px;
+        height: 90px;
+        background-color: rgb(20, 145, 106);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+
+    .iconspan{
+        font-family: "iconfont";
+        color: rgb(250, 250, 250);
+        font-size: 50px;
+    }
+    .iconspan:hover{color:rgb(235, 235, 235)}
+    
+</style>
+<link rel="stylesheet" href="./iconfont/iconfont.css">
+<body>
+    <div class="basics1">
+        <div class="rectangle rectangle1">按钮</div>
+        <div class="rectangle rectangle2">按钮Down</div>
+        <div class="rectangle rectangle3">按钮Down</div>
+        <div class="rectangle rectangle4">链接</div>
+        <div class="rectangle rectangle5">链接</div>
+    </div>
+    <p style="font-size: 30px;">精灵图</p>
+    <!-- 作业二 -->
+    <div class="basics2">
+        <div class="imgbox">
+            <div class="imgone img img1"></div>
+            <div>不可出让用地</div>
+            <div>50%</div>
+        </div>
+
+        <div class="imgbox">
+            <div class="img img2"></div>
+            <div>可出让用地</div>
+            <div>50%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img3"></div>
+            <div>道路</div>
+            <div>24%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img4"></div>
+            <div>产业</div>
+            <div>25%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img5"></div>
+            <div>绿地</div>
+            <div>17.5%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img6"></div>
+            <div>住宅</div>
+            <div>15%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img7"></div>
+            <div>配套</div>
+            <div>8.5%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img8"></div>
+            <div>商业</div>
+            <div>10%</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img9"></div>
+            <div>商住混合</div>
+        </div>
+        <div class="imgbox">
+            <div class="img img0"></div>
+            <div>全部</div>
+        </div>
+    </div>
+    <p style="font-size: 30px;">字体图标</p>
+    <!-- 作业三 -->
+    <div class="basics3">
+        <span class="iconspan">&#xe61a;</span>
+        <span class="iconspan">&#xe645;</span>
+        <span class="iconspan">&#xe642;</span>
+        <span class="iconspan">&#xe8db;</span>
+    </div>
+</body>
+
+</html>

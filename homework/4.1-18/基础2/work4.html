@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" class="ipt1" />
+    <button>点我</button>
+    <p style="font-size: 30px">方法二</p>
+    <input type="text" class="ipt2" />
+    <button>点我</button>
+    <p style="font-size: 30px">方法三</p>
+    <input type="text" class="ipt3" />
+    <button>点我</button>
+    <script>
+      let ipt = document.querySelector(".ipt1");
+      let btn1 = document.querySelectorAll("button")[0];
+      let ipt2 = document.querySelector(".ipt2");
+      let btn2 = document.querySelectorAll("button")[1];
+      let ipt3 = document.querySelector(".ipt3");
+      let btn3 = document.querySelectorAll("button")[2];
+
+      btn1.onclick = () => {
+        let num = 0;
+        if (!ipt.value) {
+          alert("请输入内容");
+          return;
+        }
+        for (let index = 0; index < ipt.value.length; index++) {
+          let isLetter = ipt.value.substring(index, index + 1);
+          if (
+            (isLetter >= "a" && isLetter <= "z") ||
+            (isLetter >= "A" && isLetter <= "Z")
+          ) {
+            num++;
+          }
+        }
+        console.log(num);
+        if (num <= 0) {
+          alert("格式错误");
+        }
+      };
+      btn2.onclick = () => {
+        let num = 0;
+        if (!ipt2.value) {
+          alert("请输入内容");
+          return;
+        }
+        let arr = ipt2.value.split("");
+        arr.forEach((item) => {
+          if ((item >= "a" && item <= "z") || (item >= "A" && item <= "Z")) {
+            num++;
+          }
+        });
+        if (num <= 0) {
+          alert("格式错误");
+        }
+      };
+      btn3.onclick = () => {
+        let num = 0;
+        if (!ipt3.value) {
+          alert("请输入内容");
+          return;
+        }
+        for (let i in ipt3.value) {
+            console.log(i)
+          let asc = ipt3.value.charCodeAt(i);
+          console.log(asc)
+          if ((asc >= 65 && asc <= 90) || (asc >= 97 && asc <= 122)) {
+            num++;
+          }
+        }
+        if (num <= 0) {
+          alert("格式错误");
+        }
+      };
+    </script>
+  </body>
+</html>

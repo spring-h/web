@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .add1{
+        width: 1255px;
+        height: 520px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 2px solid #0000FF;
+        background-color: #F6F7F8;
+    }
+    .add1>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img{
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background-color: #FFB246;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        color: #111;
+        font-size: 20px;
+        margin: 25px 0 33px;
+        font-weight: bold;
+    }
+    .content{
+        text-align: center;
+    }
+    .content>div{
+        line-height: 20px;
+        color: #81696A;
+        font-size: 12px;
+        /* font-weight: bold; */
+    }
+    /* 作业二**************************** */
+    .add2{
+        width: 1185px;
+        height: 582px;
+        border: 3px solid #0000FF;
+        background-color: #F8F9FA;
+        box-sizing: border-box;
+        padding: 80px 50px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .one{
+        flex-shrink: 0;
+    }
+    .box{
+        flex-shrink: 0;
+        width: 325px;
+        height: 190px;
+        position: relative;
+        border: 2px solid #00BCD4;
+        box-sizing: border-box;
+        padding: 50px 0 0 30px;
+        background-color: #fff;
+    }
+    .box>img{
+        position: absolute;
+        right: 25px;
+        top: 0;
+        transform: translateY(-50%);
+    }
+    .box div:nth-of-type(1){
+        color: #323648;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .box div:nth-of-type(2){
+        margin-top: 20px;
+        font-size: 13px;
+        line-height: 25px;
+        color: #956666;
+    }
+    /* 作业三************************* */
+    .add3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1220px;
+        height: 335px;
+        border: 3px solid #0000FF;
+    }
+    .add3>div{
+        width: 293px;
+        height: 305px;
+        position: relative;
+        border-bottom-left-radius: 45px;
+        border-bottom-right-radius: 45px;
+        /* box-shadow: 0 20px 20px -20px #DBCA1C; */
+        border-bottom: 10px solid #DBCA1C;
+        background-color: #1D3D70;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 25px;
+    }
+    
+    .ab{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 1px;
+        height: 260px;
+        background-color: #50625A;
+    }
+    .title3{
+        color: #F7E743;
+        font-size: 20px;
+        margin-top: 45px;
+        margin-bottom: 30px;
+    }
+    .content3{
+        color: #BFD0D5;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+</style>    
+
+<body>
+    <div class="add1">
+        <div>
+            <div class="img">
+                <img src="./image/a1.png" alt="">
+            </div>
+            <div class="title">Text Heading A</div>
+            <div class="content">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing</div>
+                <div>elit. Minima quo. Aenean feugiat in ante et blandit.</div>
+                <div>Vestibulum posuere molestie risus, ac interdum</div>
+                <div>magna porta non.</div>
+            </div>
+        </div>
+        <div>
+            <div class="img">
+                <img src="./image/a2.png" alt="">
+            </div>
+            <div class="title">Text Heading A</div>
+            <div class="content">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing</div>
+                <div>elit. Minima quo. Aenean feugiat in ante et blandit.</div>
+                <div>Vestibulum posuere molestie risus, ac interdum</div>
+                <div>magna porta non.</div>
+            </div>
+        </div>
+        <div>
+            <div class="img">
+                <img src="./image/a3.png" alt="">
+            </div>
+            <div class="title">Text Heading A</div>
+            <div class="content">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing</div>
+                <div>elit. Minima quo. Aenean feugiat in ante et blandit.</div>
+                <div>Vestibulum posuere molestie risus, ac interdum</div>
+                <div>magna porta non.</div>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 30px;"> 作业二</p>
+    <!-- ***********************作业二 -->
+    <div class="add2">
+        <div class="one">
+            <img src="./image/b1.png" alt="">
+        </div>
+        <div class="box">
+            <img src="./image/b2.png" alt="">
+            <div class="title2">SEA FREIGHT</div>
+            <div class="content2">Proin varius pellentesque nunc ut ipsum tincidunt ante. Init id lacus sed semper at tempus vel.</div>
+        </div>
+        <div class="box">
+            <img src="./image/b3.png" alt="">
+            <div class="title2">TRUCK TRANSPORT</div>
+            <div class="content2">Proin varius pellentesque nunc ut ipsum tincidunt ante. Init id lacus sed semper at tempus vel.</div>
+        </div>
+        <div class="box">
+            <img src="./image/b2.png" alt="">
+            <div class="title2">OCEAN FREIGHT</div>
+            <div class="content2">Proin varius pellentesque nunc ut ipsum tincidunt ante. Init id lacus sed semper at tempus vel.</div>
+        </div>
+        <div class="box">
+            <img src="./image/b4.png" alt="">
+            <div class="title2">AIR FREIGHT</div>
+            <div class="content2">Proin varius pellentesque nunc ut ipsum tincidunt ante. Init id lacus sed semper at tempus vel.</div>
+        </div>
+        <div class="box">
+            <img src="./image/b3.png" alt="">
+            <div class="title2">LAND FREIGHT</div>
+            <div class="content2">Proin varius pellentesque nunc ut ipsum tincidunt ante. Init id lacus sed semper at tempus vel.</div>
+        </div>
+    </div>
+    <p style="font-size: 30px;"> 作业三</p>
+    <!-- ***********************作业三 -->
+    <div class="add3">
+        <div>
+            <img src="./image/c1.png" alt="">
+            <div class="title3">Car Wash</div>
+            <div class="content3">
+                <div>Nullam ac rhoncus sapien, non gravida</div>
+                <div>purus. Alinon elit imperdiet congue.</div>
+                <div>Integer elit imperdiet congue.</div>
+            </div>
+            <div class="ab"></div>
+        </div>
+        <div>
+            <img src="./image/c2.png" alt="">
+            <div class="title3">Tech Support</div>
+            <div class="content3">
+                <div>Nullam ac rhoncus sapien, non gravida</div>
+                <div>purus. Alinon elit imperdiet congue.</div>
+                <div>Integer elit imperdiet congue.</div>
+            </div>
+            <div class="ab"></div>
+        </div>
+        <div>
+            <img src="./image/c3.png" alt="">
+            <div class="title3">Car Service</div>
+            <div class="content3">
+                <div>Nullam ac rhoncus sapien, non gravida</div>
+                <div>purus. Alinon elit imperdiet congue.</div>
+                <div>Integer elit imperdiet congue.</div>
+            </div>
+            <div class="ab"></div>
+        </div>
+        <div>
+            <img src="./image/c4.png" alt="">
+            <div class="title3">Painting</div>
+            <div class="content3">
+                <div>Nullam ac rhoncus sapien, non gravida</div>
+                <div>purus. Alinon elit imperdiet congue.</div>
+                <div>Integer elit imperdiet congue.</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
